@@ -1,0 +1,10 @@
+# list of app repos to import into project, each list item
+# must be a full url to a git repo
+#
+apps:
+- name: print-string-0.1-gf
+  repo: https://git.biotech.cdc.gov/geneflow-apps/print-string-0.1-gf.git
+  tag: 0.1
+  folder: print-string-0.1-gf-0.1
+  asset: none
+

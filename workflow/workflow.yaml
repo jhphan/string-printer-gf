@@ -1,0 +1,46 @@
+%YAML 1.1
+---
+gfVersion: v1.0
+class: workflow
+
+# metadata
+name: String Printer
+description: Print a string
+documentation_uri:
+repo_uri: https://git.biotech.cdc.gov/geneflow-workflows/string-printer-gf.git
+version: '0.1'
+username: ktr2
+
+final_output:
+- print
+
+# inputs
+inputs:
+  input:
+    label: Input
+    description: Dummy input file
+    type: File
+    default: /input/file
+    enable: true
+    visible: true
+
+# parameters
+parameters:
+  string:
+    label: String
+    description: String to print
+    type: string
+    default: 'hello'
+    enable: true
+    visible: true
+
+# steps
+steps:
+  print:
+    app: apps/print-string-0.1-gf-0.1/app.yaml
+    depend: []
+    template:
+      input: '{workflow->input}'
+      string: '{workflow->string}'
+      output: 'output.txt'
+...
