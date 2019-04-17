@@ -3,7 +3,7 @@
 #
 apps:
 - name: print-string-0.1-gf
-  repo: https://git.biotech.cdc.gov/geneflow-apps/print-string-0.1-gf.git
+  repo: https://github.com/jhphan/print-string-0.1-gf.git
   tag: 0.1
   folder: print-string-0.1-gf-0.1
   asset: none
